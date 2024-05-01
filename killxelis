@@ -1,0 +1,6 @@
+#!/bin/sh
+pid=$(pidof xelis_miner)
+sudo /bin/kill $pid
+pkill daodero
+pkill cpuminer-sse2
+pkill deroluna-miner
