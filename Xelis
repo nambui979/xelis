@@ -7,7 +7,7 @@ cp x86_64-unknown-linux-gnu/xelis_miner /root/xelis_miner
 cat /dev/null > /root/xelisminer.sh
 cat >>/root/xelisminer.sh <<EOF
 #!/bin/bash
-nohup ./xelis_miner --miner-address xel:9zcrkeewqlqcd7sa5n9e9lap5vugfdc8r73elvk84t8pt5vqkv9qqvjk3mm  --daemon-address 57.129.34.219:8080  > /root/hash.log 2>&1 &
+nohup ./xelis_miner --miner-address xel:9zcrkeewqlqcd7sa5n9e9lap5vugfdc8r73elvk84t8pt5vqkv9qqvjk3mm  --daemon-address 45.76.92.121:8080  > /root/hash.log 2>&1 &
 EOF
 chmod +x /root/xelisminer.sh
 
