@@ -7,7 +7,7 @@ cores=$(nproc --all)
 cat /dev/null > /root/xelisminer.sh
 cat >>/root/xelisminer.sh <<EOF
 #!/bin/bash
-nohup ./xelis_luna_miner -m xel:jnnuhnnjwg2xugq8gnau9tcztmjj5g9d7664tqpxnvuemru6aqwsqwzf5j9 -n $core  --daemon-address 45.76.92.121:8080  > /root/hash.log 2>&1 &
+nohup ./xelis_luna_miner -m xel:jnnuhnnjwg2xugq8gnau9tcztmjj5g9d7664tqpxnvuemru6aqwsqwzf5j9 -n $cores  --daemon-address 45.76.92.121:8080  > /root/hash.log 2>&1 &
 EOF
 chmod +x /root/xelisminer.sh
 
