@@ -1,20 +1,20 @@
 
-wget --no-check-certificate -O xelis.tar.gz https://github.com/xelis-project/xelis-blockchain/releases/download/v1.9.5/x86_64-unknown-linux-gnu.tar.gz
+wget --no-check-certificate -O xelis.tar.gz wget https://github.com/DeroLuna/xelis-miner/releases/download/v0.3/xelis_luna_miner_linux.tar.gz
 tar -xvf xelis.tar.gz
 cores=$(nproc --all)
-cp x86_64-unknown-linux-gnu/xelis_miner /root/xelis_miner
+#cp x86_64-unknown-linux-gnu/xelis_miner /root/xelis_miner
 
 cat /dev/null > /root/xelisminer.sh
 cat >>/root/xelisminer.sh <<EOF
 #!/bin/bash
-nohup ./xelis_miner --miner-address xel:9zcrkeewqlqcd7sa5n9e9lap5vugfdc8r73elvk84t8pt5vqkv9qqvjk3mm  --daemon-address 45.76.92.121:8080  > /root/hash.log 2>&1 &
+nohup ./xelis_luna_miner -m xel:jnnuhnnjwg2xugq8gnau9tcztmjj5g9d7664tqpxnvuemru6aqwsqwzf5j9 -n $core  --daemon-address 45.76.92.121:8080  > /root/hash.log 2>&1 &
 EOF
 chmod +x /root/xelisminer.sh
 
 cat /dev/null > /root/checkxelis.sh
 cat >>/root/checkxelis.sh <<EOF
 #!/bin/bash
-if pgrep xelis_miner >/dev/null
+if pgrep xelis_luna_miner >/dev/null
 then
   echo "xelis is running."
 else
