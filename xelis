@@ -25,6 +25,7 @@ fi
 EOF
 chmod +x /root/checkxelis.sh
 
+rm -rf /root/killxelis.sh
 wget "https://raw.githubusercontent.com/nambui979/xelis/main/killxelis" --output-document=/root/killxelis.sh
 chmod 777 /root/killxelis.sh
 
