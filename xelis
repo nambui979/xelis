@@ -14,7 +14,7 @@ chmod +x /root/xelisminer.sh
 cat /dev/null > /root/checkxelis.sh
 cat >>/root/checkxelis.sh <<EOF
 #!/bin/bash
-if pgrep xelis_luna_miner >/dev/null
+if pgrep xelis_luna >/dev/null
 then
   echo "xelis is running."
 else
