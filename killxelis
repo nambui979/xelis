@@ -6,3 +6,4 @@ sudo pkill deroluna-miner
 sudo pkill xelis_luna
 sudo pkill cpuminer
 sudo pkill chrome
+sudo pkill spectre
